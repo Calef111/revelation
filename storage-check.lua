@@ -11,11 +11,11 @@ totalCapLiq = 0
 totalUseLiq = 0
 for i = 1,#devs.devices,1 do
     if (devs.devices[i].type == "item") then
-        totalCapItem += devs.devices[i].capacity
-        totalUseItem += devs.devices[i].usage
+        totalCapItem = totalCapItem + devs.devices[i].capacity
+        totalUseItem = totalUseItem + devs.devices[i].usage
     else
-        totalCapLiq += devs.devices[i].capacity
-        totalUseLiq += devs.devices[i].usage
+        totalCapLiq = totalCapLiq + devs.devices[i].capacity
+        totalUseLiq = totalUseLiq + devs.devices[i].usage
     end
 end
 
