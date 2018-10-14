@@ -24,7 +24,7 @@ for i = 1,#devs.devices,1 do
     end
 end
 
-print("Energy Usage:",round(energy/1000,2) + "kRF/T"
+print("Energy Usage:",round(energy/1000,2) .. "kRF/T")
 
-print("Items Stored:",round(totalUseItem / 1000,2) + "k","/",round(totalCapItem / 1000,2) + "k",":",round(totalUseItem / totalCapItem * 100,2) + "%")
-print("Items Stored:",round(totalUseLiq / 1000,2) + "k","/",round(totalCapLiq / 1000,2) + "k",":",round(totalUseLiq / totalCapLiq * 100,2) + "%")
+print("Items Stored:",round(totalUseItem / 1000,2) .. "k","/",round(totalCapItem / 1000,2) .. "k",":",round(totalUseItem / totalCapItem * 100,2) .. "%")
+print("Fluids Stored:",round(totalUseLiq / 1000,2) .. "k","/",round(totalCapLiq / 1000,2) .. "k",":",round(totalUseLiq / totalCapLiq * 100,2) .. "%")
