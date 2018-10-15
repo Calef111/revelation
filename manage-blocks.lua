@@ -11,7 +11,7 @@ end
 
 local component = require("component")
 local os = require("os")
-stor = component.proxy(component.get("526"))
+stor = component.proxy(component.get("37a"))
 
 items = {
     {label="Lapis Lazuli",max_quantity=700,min_quantity=500,name="dye",damage=4,block_name="lapis_block",block_damage=0,block_size=9},
