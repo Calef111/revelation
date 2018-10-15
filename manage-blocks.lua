@@ -38,13 +38,13 @@ while true do
         print("Checking: "..item.label)
 
         if (quantityInStorage > item.max_quantity) then
-            print(quantityInStorage - item.max_quantity.." "..item.label.." to block")
+            print("  "..quantityInStorage - item.max_quantity.." "..item.label.." to block")
             if (isCrafting(stor,blockStack) == false) then
                 if (item.block_size == 0) then
-                    print("Error: Spezify block size for item",item.name)
+                    print("  Error: Spezify block size for item",item.name)
                 else
                     toCraft = math.floor((quantityInStorage - item.max_quantity) / item.block_size + 1)
-                    print("Blocking: "..(toCraft * 9).." "..item.label)
+                    print("  Blocking: "..(toCraft * 9).." "..item.label)
                     stor.scheduleTask(blockStack,toCraft)
                 end
             end
@@ -54,11 +54,12 @@ while true do
             toCraft = item.min_quantity - quantityInStorage
             print(toCraft.." " ..item.label.." to unblock")
             if (isCrafting(stor,itemStack) == false) then            
-                print("Unblocking: ",(toCraft * 9).." "..item.label)
+                print("  Unblocking: ",(toCraft * 9).." "..item.label)
                 stor.scheduleTask(itemStack,toCraft)
             end
         end
     end
 
+    print("\n\n")
     os.sleep(10)
 end
