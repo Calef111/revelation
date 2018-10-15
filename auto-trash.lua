@@ -34,6 +34,6 @@ while true
         end
     end
 
-    print("Operation finished")
+    print("Operation finished\n\n\n")
     os.sleep(120)
 end
