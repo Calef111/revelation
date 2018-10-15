@@ -23,7 +23,11 @@ items = {
     {label="Aluminum Ingot",max_quantity=300,min_quantity=100,name="thermalfoundation:material",damage=132,block_name="thermalfoundation:storage",block_damage=4,block_size=9},
     {label="Iron Ingot",max_quantity=700,min_quantity=500,name="iron_ingot",damage=0,block_name="iron_block",block_damage=0,block_size=9},
     {label="Copper Ingot",max_quantity=300,min_quantity=100,name="thermalfoundation:material",damage=128,block_name="thermalfoundation:storage",block_damage=0,block_size=9},
-    {label="Gold Ingot",max_quantity=300,min_quantity=100,name="gold_ingot",damage=0,block_name="gold_block",block_damage=0,block_size=9}
+    {label="Gold Ingot",max_quantity=300,min_quantity=100,name="gold_ingot",damage=0,block_name="gold_block",block_damage=0,block_size=9},
+    {label="Nickel Ingot",max_quantity=300,min_quantity=100,name="thermalfoundation:material",damage=133,block_name="thermalfoundation:storage",block_damage=5,block_size=9},
+    {label="Diamond",max_quantity=700,min_quantity=500,name="minecraft:diamond",damage=0,block_name="minecraft:diamond_block",block_damage=0,block_size=9},
+    {label="Emerald",max_quantity=300,min_quantity=100,name="minecraft:emerald",damage=0,block_name="minecraft:emerald_block",block_damage=0,block_size=9},
+    {label="Draconium Ingot",max_quantity=700,min_quantity=500,name="draconicevolution:draconium_ingot",damage=0,block_name="draconicevolution:draconium_block",block_damage=0,block_size=9}
 }
 
 while true do
