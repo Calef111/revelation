@@ -33,8 +33,13 @@ items = {
 while true do
     for i,item in ipairs(items) do
         itemStack = {name=item.name,damage=item.damage}
-        blockStack = {name=item.block_name,damage=item.block_damage}    
-        quantityInStorage = stor.getItem(itemStack).size
+        blockStack = {name=item.block_name,damage=item.block_damage}
+        storItem = stor.getItem(itemStack)
+        if (storItem == nil) then
+            quantityInStorage = 0
+        else
+            quantityInStorage = storItem.size
+        end
         print("Checking: "..item.label)
 
         if (quantityInStorage > item.max_quantity) then
@@ -53,8 +58,8 @@ while true do
         if (quantityInStorage < item.min_quantity) then
             toCraft = item.min_quantity - quantityInStorage
             print(toCraft.." " ..item.label.." to unblock")
-            if (isCrafting(stor,itemStack) == false) then            
-                print("  Unblocking: ",(toCraft * 9).." "..item.label)
+            if (isCrafting(stor,itemStack) == false) then
+                print("  Unblocking: ",(toCraft).." "..item.label)
                 stor.scheduleTask(itemStack,toCraft)
             end
         end
